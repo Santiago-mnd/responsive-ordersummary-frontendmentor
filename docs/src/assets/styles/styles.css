@@ -14,9 +14,8 @@ html
 body
 {
     background: var(--pale-blue);
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    overflow: hidden;
     font-family: 'Red hat display', sans-serif;
 }
 
@@ -30,7 +29,7 @@ body
     grid-template-columns: 1fr auto 1fr;
     grid-template-rows: 1fr auto 1fr;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .main__container .main__container--content
@@ -73,7 +72,7 @@ body
     margin: 0 2.8rem;
 }
 
-.main__container--content .text p:nth-child(1)
+.main__container--content .text h1
 {
     color: var(--dark-blue);
     font-size: 2rem;
@@ -81,7 +80,7 @@ body
     margin-top: 5rem;
 }
 
-.main__container--content .text p:nth-child(2)
+.main__container--content .text p
 {
     color: var(--desaturated-blue);
     text-align: center;
@@ -140,6 +139,12 @@ body
     font-weight: bold;
 }
 
+.buttons button:focus-visible
+{
+    outline: .3rem solid black;
+}
+
+
 .buttons button:nth-child(1)
 {
     color: white;
@@ -160,6 +165,7 @@ body
     color: var(--desaturated-blue);
     padding: 2rem;
     cursor: pointer;
+    border-radius: 1rem;
 }
 
 .buttons button:nth-child(2):hover
